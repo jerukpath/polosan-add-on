@@ -1,0 +1,17 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.damage": {
+			"states": {
+				"default": {
+          "transitions": [
+            {
+              "1": "(variable.attack_time) && (query.get_equipped_item_name == 'wooden_sword')"
+            }
+          ]
+        },
+				"1": { "transitions": [ {"default": "(!variable.attack_time)"} ], "on_entry": [ "/function custom" ] }
+			}
+		}
+	}
+}
